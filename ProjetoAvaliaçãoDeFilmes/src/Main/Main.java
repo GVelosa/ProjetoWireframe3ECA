@@ -50,6 +50,8 @@ public class Main {
 		String[] Assistido = {"Assistido", "Assistindo", "Na Lista", "Dropado"};
 		
 		JTextArea descricao = new AreaDeTexto("Filme legal");
+		
+		JButton Salvar = new JButton("Salvar");
 			
 		primeiraAba.add(new StarRater(60, 60),BorderLayout.SOUTH);
 		primeiraAba.add(new JLabel(new ImageIcon("src/250px-Coraline_poster.jpg")), BorderLayout.WEST);
@@ -77,7 +79,9 @@ public class Main {
 		terceiraAba2.add(Anotacoes, BorderLayout.NORTH);
 		terceiraAba2.add(descricao, BorderLayout.CENTER);
 		terceiraAba2.add(new JComboBox<String>(Assistido), BorderLayout.SOUTH);
-		terceiraAba.add(new JButton("Salvar"), BorderLayout.SOUTH);
+		FilmeListener listener = new FilmeListener(descricao);
+		Salvar.addActionListener(listener);
+		terceiraAba.add(Salvar, BorderLayout.SOUTH);
 		
 		cabeca.add(AppNome, BorderLayout.NORTH);
 		corpoDeAbas.add(abas);
