@@ -12,8 +12,8 @@ public class SubTitulos extends JLabel{
 		init();
 }
 	public void init() {
-		this.setForeground(new Color(12, 63, 205));
-		this.setFont(new Font(null, Font.BOLD, 26));
+		this.setForeground(new Color(0, 0, 0));
+		this.setFont(new Font(null, Font.BOLD, 15));
 		this.setHorizontalAlignment(JLabel.CENTER);
 	}
 }
